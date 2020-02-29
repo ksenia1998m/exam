@@ -1,0 +1,52 @@
+<div class="container"> 
+    <h1>Добавить заметку</h1> 
+    <form [formGroup]="phoneForm"> 
+    <div class="row"> 
+   
+   
+    <div class="col-12 mt-2"> 
+    <input type="text" class="form-control" placeholder="Введите название телефона" formControlName="name" #inputName> 
+    </div> 
+
+    <div class="col-12 mt-2"> 
+    <input type="text" class="form-control" placeholder="Введите название телефона" formControlName="vendor_code" #inputVendor_code> 
+    </div> 
+
+    <div class="col-12 mt-2"> 
+    <input type="text" class="form-control" placeholder="Введите название телефона" formControlName="price" #inputPrice>  
+    </div>
+ 
+    <div class="col-12 mt-2"> 
+        <select class="form-control" formControlName="manufacturer" #inputManufacturer class="form-control"> 
+            <option disabled value>не выбрано</option> 
+            <option value="Китай">Китай</option> 
+            <option value="Вьетнам">Вьетнам</option> 
+            <option value="Россия">Россия</option> 
+        </select> 
+    </div> 
+        
+    <div class="col-12 mt-2"> 
+    <input type="date" class="form-control" placeholder="Дата выпуска" formControlName="year" #inputYear> 
+    </div> 
+
+    <div class="col-12 mt-2"> 
+    <input type="text" class="form-control" placeholder="Введите название телефона" formControlName="quantity" #inputQuantity> 
+    </div> 
+            
+    <div class="col-12 mt-2"> 
+    <input type="text" class="form-control" placeholder="Введите название телефона" formControlName="mpx" #inputMpx> 
+    </div> 
+    
+    <div class="col-12 mt-2"> 
+    <input type="text" class="form-control" placeholder="Введите название телефона" formControlName="screen" #inputScreen> 
+    </div> 
+                
+                
+
+    <div class="col-12 mt-2"> 
+    <button class="btn btn-primary" (click)="doPost(inputName, inputVendor_code ,inputPrice, inputManufacturer, inputYear, inputQuantity, inputMpx, inputScreen)" [disabled]="phoneForm.invalid">Сохранить</button> 
+    </div> 
+    
+    </div> 
+    </form> 
+    </div>

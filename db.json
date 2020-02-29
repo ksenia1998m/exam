@@ -1,0 +1,51 @@
+{
+  "phone": [
+    {
+      "name": "Название",
+      "vendor_code": "5654654",
+      "price": "15000",
+      "manufacturer": "Китай",
+      "year": "2020-02-29",
+      "quantity": "5415",
+      "mpx": "8",
+      "screen": "23",
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "name": "215415",
+      "vendor_code": "477",
+      "price": "777",
+      "manufacturer": "",
+      "year": "2020-03-27",
+      "quantity": "747",
+      "mpx": "477",
+      "screen": "7777",
+      "id": 3
+    },
+    {
+      "name": "апопао",
+      "vendor_code": "Китай",
+      "price": "564",
+      "manufacturer": "",
+      "year": "2020-03-28",
+      "quantity": "прлрпл",
+      "mpx": "прл",
+      "screen": "прл",
+      "id": 4
+    },
+    {
+      "name": "Телефон",
+      "vendor_code": "паопао",
+      "price": "1",
+      "manufacturer": "Китай",
+      "year": "2020-02-27",
+      "quantity": "апоап",
+      "mpx": "апво",
+      "screen": "апоп",
+      "id": 5
+    }
+  ]
+}

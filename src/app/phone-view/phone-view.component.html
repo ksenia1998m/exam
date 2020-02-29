@@ -1,0 +1,81 @@
+<div class="container">
+    <div class= "m-6 col-12">
+        <div class="card">
+            <div class="card card-header">
+                <h5>Телефон {{inPhone.vendor_code}}</h5>
+            </div>
+            <div class="card card-body">
+                <div *ngIf=!isEdit>
+                    <div>№: {{inPhone.id}}</div>
+                        <div>Название: {{inPhone.name}}</div>
+                        <div>Производитель: {{inPhone.manufacturer}}</div>
+                        <div>Год выпуска: {{inPhone.year}}</div>
+                        <div>Количество заказов: {{inPhone.quantity}}</div>
+                        <div>Камера: {{inPhone.mpx}}</div>
+                        <div ng-repeat="price in inPhone | orderBy : 'price'" >Цена: {{inPhone.price}}</div>
+                        <div>Разрешение экрана: {{inPhone.screen}}</div>
+                        
+                        <button class="btn btn-primary m-2" (click)="showEdit()">Редактировать</button> 
+                        <button class="btn btn-danger m-2" (click)="doDelete(inPhone.id)">Удалить</button>
+                        <button class="btn btn-danger m-2" (click)="doBuy(inPhone.id, inPhone.quantity)">Купить</button>
+                </div>
+     
+            <!-- <custom ></custom> -->
+
+                <div class="row" *ngIf=isEdit> 
+                    <div class="ml-2"> 
+                    <div class="form-group"> 
+                    <label for="">Название</label> 
+                    <input type="text" class="form-control" placeholder="Текст" [(ngModel)]="inPhone.name" #inname > 
+                    </div> 
+
+                    <div class="form-group"> 
+                    <label for="">Артикул</label> 
+                    <input type="text" class="form-control" placeholder="Текст" [(ngModel)]="inPhone.vendor_code" #invendor_code> 
+                    </div> 
+
+                    <div class="form-group"> 
+                    <label for="">Цена</label> 
+                    <input type="text" class="form-control" placeholder="Текст" [(ngModel)]="inPhone.price" #inprice> 
+                    </div> 
+
+                    <div class="form-group"> 
+                    <label for="">Производитель</label> 
+                    <select class="form-control"  [(ngModel)]="inPhone.manufacturer" #inmanufacturer class="form-control"> 
+                        <option disabled value>не выбрано</option> 
+                        <option value="Китай">Китай</option> 
+                        <option value="Вьетнам">Вьетнам</option> 
+                        <option value="Россия">Россия</option> 
+                    </select> 
+                    </div> 
+
+                    <div class="form-group"> 
+                    <label for="">Дата выпуска</label> 
+                    <input type="date" class="form-control" placeholder="Текст" [(ngModel)]="inPhone.year" #inyear> 
+                    </div> 
+                
+                
+                    <div class="form-group"> 
+                    <label for="">Количество заказов</label> 
+                    <input type="text" class="form-control" placeholder="Текст" [(ngModel)]="inPhone.quantity" #inquantity> 
+                    </div> 
+                                    
+                    <div class="form-group"> 
+                    <label for="">Камера</label> 
+                    <input type="text" class="form-control" placeholder="Текст" [(ngModel)]="inPhone.mpx" #inmpx> 
+                    </div> 
+
+                    <div class="form-group"> 
+                    <label for="">Разрешение экрана</label> 
+                    <input type="text" class="form-control" placeholder="Текст" [(ngModel)]="inPhone.screen" #inscreen> 
+                    </div> 
+
+
+                 <button class="btn btn-primary m-2" (click)="doPut(inPhone.id, inname.value, invendor_code.value, inprice.value , inmanufacturer.value , inyear.value,  inquantity.value, inmpx.value, inscreen.value)">Сохранить</button> 
+                    </div> 
+
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
