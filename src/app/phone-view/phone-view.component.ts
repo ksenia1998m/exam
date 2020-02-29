@@ -71,21 +71,16 @@ formatdate: string;
     } 
     else {this.addEdit = "Редактировать"; 
     let phone = new Phone (name, vendor_code, price, manufacturer, year, quantity, mpx, screen); 
-    await this.servicesService.putPhone(id, phone); 
+    await this.servicesService.putPhone(phone, id); 
     } 
     } catch (err) { 
     console.error(err); 
     } 
     } 
 
-    async doBuy(id, quantity) { 
-       quantity = quantity + 1;
-      try { 
-      await this.servicesService.putPhone(id, quantity); 
-      this.editphone.emit(quantity); 
-      } catch (err) { 
-      console.error(err); 
-      } 
+    doBuy(id:number) { 
+      this.inPhone.quantity++;
+      this.servicesService.putPhone(this.inPhone, id);
       }
     
     async doDelete(inPhone) { 

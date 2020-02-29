@@ -9,7 +9,6 @@ export class Phone{
     public screen: string;
     public id: number;
     constructor (name: string, vendor_code: number, price: number, manufacturer: string, year: string, quantity: number, mpx: string, screen: string, id?: number) {
-        this.id = id;
         this.name = name;
         this.vendor_code = vendor_code;
         this.price = price;
@@ -18,5 +17,6 @@ export class Phone{
         this.quantity = quantity;
         this.mpx = mpx;
         this.screen = screen;
+        this.id = id;
     }
 }

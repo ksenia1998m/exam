@@ -24,7 +24,7 @@ postPhone(data) {
 return this.post(this.url, data, this.header).toPromise(); 
 } 
 
-putPhone(id: number, data) { 
+putPhone(data, id: number) { 
 return this.put(`${this.url}/${id}`, data, this.header).toPromise(); 
 } 
 
